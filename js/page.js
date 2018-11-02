@@ -293,6 +293,13 @@ function getSizes() {
 
 }
 
+
+function showCopyLink() {
+    $('#myurl').val(shareLink);
+    showModal('modCopyLink')
+    //copyLink();
+}
+
 function MoveOn(selector) {
     $('html,body').animate({
         scrollTop: $('#' +selector).offset().top
