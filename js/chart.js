@@ -117,7 +117,7 @@
           function formatSelect2(node) {
             scolor = (node.displayed) ? 'ddlvisible' : 'ddlunvisible'
 
-            if (filterInst !== 'All') {
+            if ((filterInst !== 'All') || (selPeriod !== 'All')) {
                 if (typeof node.ico !== 'undefined') {
 
                     if ($('#ico'+node.ico).length == 0) {
@@ -136,7 +136,7 @@
 
           $('#ddlSearch').on('change', changeSearchDDL)
           $('#ddlSearch').select2({
-              data: menudata,
+              data: menudata[selPeriod],
               width: width - title.outerWidth() - svgmargin,
               allowClear: true,
               matcher: matchCustom,
@@ -544,7 +544,7 @@
         val = $('#ddlSearch').val();
         hideAll();
         if (val !== '') {
-            dmenu = menudata.find(x => x.id == val)
+            dmenu = menudata[selPeriod].find(x => x.id == val)
             if ($('#ico' + dmenu.ico).length) {
                 sel = d3.select('#ico' + dmenu.ico);//text.replace(/ /g, '_'))
                 el = sel._groups[0][0]
@@ -666,7 +666,7 @@
 
       }
       function hideDetailBox(ico) {
-          dmenu = menudata.find(x => x.id == ico)
+          dmenu = menudata[selPeriod].find(x => x.id == ico)
 
           sel = d3.select('#ico' + dmenu.ico);//text.replace(/ /g, '_'))
           el = sel._groups[0][0]
