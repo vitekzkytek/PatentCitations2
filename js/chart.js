@@ -58,7 +58,7 @@
           footheight = 140
           height = ($(window).height() * 0.85) - footheight;
           //width = Math.min($(window).width() * 0.6, 880) //no chart margin
-          width = Math.min(Math.max($(window).width() * 0.6,750),1000)
+          width = Math.min(Math.max($(window).width() * 0.6,800),1000)
           svgmargin = 120
 
           chartcontainer = $('#app .chartcontainer')
@@ -258,7 +258,7 @@
           var svg = d3.select("#legendDiv")
               .append("svg")
               .attr("width", width)
-              .attr("height", 30)
+              .attr("height", 25)
               .attr('class', 'legend')
               .attr('id', 'legendSvg')
 
@@ -278,7 +278,7 @@
                   return d.id
               })
               .attr('transform', function (d, i) {
-                  return 'translate(' + (10 + distances[i]) + ',0)'
+                  return 'translate(' + (10 + distances[i]) + ',5)'
               })
               .on('click', function (d) {
                   ChangeInstType(d);
