@@ -58,7 +58,7 @@
           footheight = 140
           height = ($(window).height() * 0.85) - footheight;
           //width = Math.min($(window).width() * 0.6, 880) //no chart margin
-          width = Math.min(Math.max($(window).width() * 0.6,700),1000)
+          width = Math.min(Math.max($(window).width() * 0.6,750),1000)
           svgmargin = 120
 
           chartcontainer = $('#app .chartcontainer')
