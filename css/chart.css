@@ -114,7 +114,10 @@ form {
   .switcher {
       float:left;
       width: 33.33%;
-      cursor: pointer;
+  }
+
+  .switchCol {
+    cursor: pointer;
   }
 
   .switcher:after {
@@ -133,7 +136,6 @@ form {
   #swSumBy {
       /* float:right; */
       text-align:right;
-
   }
 
   .switchCol {
